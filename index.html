@@ -1,9 +1,286 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <title>Privacy & Policy Page</title>
-    </head>
-  <body>
-    <h1>Privacy & Policy</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Scanner – Privacy Policy</title>
+  <meta name="description" content="Privacy policy for the Car Scanner OBD-II app for Android.">
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #1d1f23; --muted: #5b616b; --line: #e3e6ea;
+      --accent: #0b6bcb; --card: #f6f8fa;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #121417; --fg: #e8eaed; --muted: #a0a6ae; --line: #2b2f35;
+              --accent: #6cb4ff; --card: #1b1e22; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+           font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Cairo", Tahoma, sans-serif; }
+    main { max-width: 820px; margin: 0 auto; padding: 32px 20px 64px; }
+    header.top { display: flex; justify-content: space-between; align-items: center;
+                 gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+    nav.lang a { color: var(--accent); text-decoration: none; margin-inline-start: 12px; font-weight: 600; }
+    h1 { font-size: 1.9rem; margin: 24px 0 4px; }
+    h2 { font-size: 1.25rem; margin: 32px 0 8px; }
+    h3 { font-size: 1.05rem; margin: 20px 0 6px; }
+    p.meta { color: var(--muted); margin: 0 0 16px; }
+    .summary { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 18px; }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: .95rem; }
+    th, td { border: 1px solid var(--line); padding: 8px 10px; vertical-align: top; text-align: start; }
+    th { background: var(--card); }
+    a { color: var(--accent); }
+    section.lang-block + section.lang-block { margin-top: 56px; border-top: 2px solid var(--line); padding-top: 8px; }
+    [dir="rtl"] { font-family: "Cairo", Tahoma, system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <strong>Car Scanner</strong>
+    <nav class="lang"><a href="#en">English</a><a href="#ar" lang="ar">العربية</a></nav>
+  </header>
+
+  <!-- ============================ ENGLISH ============================ -->
+  <section id="en" class="lang-block" lang="en" dir="ltr">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: 7 November 2026</p>
+
+    <p>This policy explains what information the <strong>Car Scanner</strong> Android app
+    (package <code>com.aemdev.carscanner</code>) uses, why, and the choices you have.
+    The app is developed by <strong>Ahmed Essam (AEM Dev)</strong>, Egypt ("we", "us").</p>
+
+    <div class="summary">
+      <p><strong>In short:</strong></p>
+      <ul>
+        <li>Your vehicles, VIN, trips, GPS data, sensor logs and diagnostic codes stay <strong>on your phone</strong>. We do not upload them.</li>
+        <li>No account or sign-in is needed.</li>
+        <li>Some data leaves your phone through Google services: crash reports, app analytics, ads, and issue reports you choose to send.</li>
+        <li>We do not sell your data.</li>
+      </ul>
+    </div>
+
+    <h2>1. Information stored only on your device</h2>
+    <p>The following is saved in the app's private storage on your phone and is not sent to us:</p>
+    <ul>
+      <li>Vehicle profiles you create (name, make, model, year, fuel type, optional VIN).</li>
+      <li>Trips, live sensor readings and logs, diagnostic trouble codes and their history.</li>
+      <li>Reports you export (PDF, CSV, JSON). These are only shared if you choose to share or save them.</li>
+      <li>Names and addresses of OBD-II adapters you connect to, and your app settings.</li>
+      <li><strong>Location (GPS):</strong> used only while the app is open on screen, to show GPS speed, altitude and similar sensors and to add them to your trips. Location is saved with your trips on your phone and is not sent to us. The app does not use location in the background.</li>
+    </ul>
+
+    <h2>2. Information that leaves your device</h2>
+    <table>
+      <thead><tr><th>What</th><th>When</th><th>Data</th><th>Purpose</th><th>Processed by</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Issue reports</td>
+          <td>Only when you tap Send on <em>Settings → Report an Issue</em></td>
+          <td>Issue type, your comment, vehicle name, device model, Android version, app version, Firebase installation ID, a random anonymous user ID. <strong>Your VIN is not included.</strong></td>
+          <td>To investigate and fix the problem you report</td>
+          <td>Google Firebase (Cloud Firestore, Authentication)</td>
+        </tr>
+        <tr>
+          <td>Crash and error reports</td>
+          <td>Automatically when the app crashes or hits an error</td>
+          <td>Error details, device model, Android version, app version, installation ID, vehicle make/model/year, adapter name and connection type. VIN-like values are removed before sending.</td>
+          <td>To find and fix bugs and keep the app stable</td>
+          <td>Google Firebase Crashlytics</td>
+        </tr>
+        <tr>
+          <td>App analytics</td>
+          <td>While you use the app</td>
+          <td>App usage events (for example screens opened), app instance ID, device model, Android version, approximate region derived from your IP address</td>
+          <td>To understand which features are used and improve the app</td>
+          <td>Google Analytics for Firebase</td>
+        </tr>
+        <tr>
+          <td>App integrity checks</td>
+          <td>When the app talks to our Firebase backend</td>
+          <td>Device and app integrity signals</td>
+          <td>To protect the backend from abuse</td>
+          <td>Firebase App Check, Google Play Integrity</td>
+        </tr>
+        <tr>
+          <td>Advertising</td>
+          <td>When ads are shown</td>
+          <td>Advertising ID, IP address and approximate location, device information, ad interactions</td>
+          <td>To show ads, measure them, and prevent ad fraud</td>
+          <td>Google AdMob</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>All of this data is sent over encrypted connections (HTTPS).</p>
+
+    <h3>Ads and consent</h3>
+    <p>The app is free and shows ads from Google AdMob. Some features (for example trip export and trip sensors) can be unlocked by watching an optional rewarded ad.
+    If you are in the European Economic Area, the UK or Switzerland, the app asks for your consent through Google's consent form before personalized ads are shown.
+    You can change your choice any time in <em>Settings → Privacy &amp; ad choices</em>.
+    On any Android device you can reset or delete your advertising ID in <em>Android Settings → Privacy → Ads</em> (the exact path varies by device).</p>
+
+    <h2>3. Permissions the app asks for</h2>
+    <ul>
+      <li><strong>Bluetooth / Nearby devices:</strong> to find and connect to your OBD-II adapter.</li>
+      <li><strong>Location:</strong> required by Android for Bluetooth scanning on some versions, and for GPS sensors while the app is open. Never used in the background.</li>
+      <li><strong>Notifications:</strong> to show the ongoing notification while a trip is recording.</li>
+      <li><strong>Internet:</strong> for Wi-Fi OBD adapters, ads, crash reports, analytics and issue reports.</li>
+    </ul>
+    <p>You can deny any permission. The related feature will not work, but the rest of the app will.</p>
+
+    <h2>4. Sharing</h2>
+    <p>We do not sell or rent your information. We do not share it with anyone except the Google service providers listed above,
+    who process it on our behalf under their own terms, or when required by law.
+    Learn how Google uses data: <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a>,
+    <a href="https://firebase.google.com/support/privacy">Firebase privacy</a>, and
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+    <h2>5. How long data is kept</h2>
+    <ul>
+      <li>Data on your device: until you delete it in the app, clear the app's data, or uninstall the app.</li>
+      <li>Issue reports: up to 12 months after they are received, then deleted.</li>
+      <li>Crash reports: kept by Firebase Crashlytics for up to 90 days.</li>
+      <li>Analytics and advertising data: kept according to Google's retention settings.</li>
+    </ul>
+
+    <h2>6. Your choices and deleting your data</h2>
+    <ul>
+      <li><strong>On-device data:</strong> delete vehicles and trips in the app, or remove everything in <em>Android Settings → Apps → Car Scanner → Storage → Clear data</em>, or uninstall the app.</li>
+      <li><strong>Issue reports:</strong> email us at <a href="mailto:ahmedessam291994@gmail.com?subject=Car%20Scanner%20data%20deletion">ahmedessam291994@gmail.com</a> with the subject "Car Scanner data deletion". Include the approximate date you sent the report and your device model so we can find it. We delete it within 30 days.</li>
+      <li><strong>Ads:</strong> change your consent in <em>Settings → Privacy &amp; ad choices</em> (where available) and manage your advertising ID in Android settings.</li>
+    </ul>
+    <p>Depending on where you live, you may have rights to access, correct or delete your personal data, or to object to its processing. Contact us to use these rights.</p>
+
+    <h2>7. Children</h2>
+    <p>Car Scanner is a vehicle diagnostics tool meant for adults. It is not directed at children under 13, and we do not knowingly collect information from them.</p>
+
+    <h2>8. Changes to this policy</h2>
+    <p>If this policy changes, we will update it on this page and change the effective date above. Important changes will also be noted in the app's release notes.</p>
+
+    <h2>9. Contact</h2>
+    <p>Ahmed Essam (AEM Dev), Egypt<br>
+    Email: <a href="mailto:ahmedessam291994@gmail.com">ahmedessam291994@gmail.com</a></p>
+  </section>
+
+  <!-- ============================ ARABIC ============================ -->
+  <section id="ar" class="lang-block" lang="ar" dir="rtl">
+    <h1>سياسة الخصوصية</h1>
+    <p class="meta">تاريخ السريان: 7 نوفمبر 2026</p>
+
+    <p>توضّح هذه السياسة المعلومات التي يستخدمها تطبيق <strong>Car Scanner</strong> على أندرويد
+    (الحزمة <code dir="ltr">com.aemdev.carscanner</code>)، وسبب استخدامها، والخيارات المتاحة لك.
+    التطبيق من تطوير <strong>أحمد عصام (AEM Dev)</strong>، مصر ("نحن").</p>
+
+    <div class="summary">
+      <p><strong>باختصار:</strong></p>
+      <ul>
+        <li>بيانات سياراتك ورقم الشاسيه (VIN) والرحلات وبيانات GPS وسجلات الحساسات وأكواد الأعطال تبقى <strong>على هاتفك</strong>، ولا نرفعها.</li>
+        <li>لا يحتاج التطبيق إلى حساب أو تسجيل دخول.</li>
+        <li>بعض البيانات تخرج من هاتفك عبر خدمات Google: تقارير الأعطال البرمجية، وإحصاءات الاستخدام، والإعلانات، وبلاغات المشاكل التي تختار إرسالها.</li>
+        <li>لا نبيع بياناتك.</li>
+      </ul>
+    </div>
+
+    <h2>1. معلومات تُحفظ على جهازك فقط</h2>
+    <p>تُحفظ البيانات التالية في التخزين الخاص بالتطبيق على هاتفك ولا تُرسل إلينا:</p>
+    <ul>
+      <li>ملفات السيارات التي تنشئها (الاسم، الشركة المصنّعة، الطراز، سنة الصنع، نوع الوقود، ورقم الشاسيه VIN اختياريًا).</li>
+      <li>الرحلات، وقراءات الحساسات الحية وسجلاتها، وأكواد الأعطال وسجلها.</li>
+      <li>التقارير التي تصدّرها (PDF وCSV وJSON)، ولا تُشارك إلا إذا اخترت أنت مشاركتها أو حفظها.</li>
+      <li>أسماء وعناوين محوّلات OBD-II التي تتصل بها، وإعدادات التطبيق.</li>
+      <li><strong>الموقع (GPS):</strong> يُستخدم فقط أثناء فتح التطبيق على الشاشة، لعرض السرعة والارتفاع وحساسات GPS المشابهة وإضافتها إلى رحلاتك. يُحفظ الموقع مع رحلاتك على هاتفك ولا يُرسل إلينا. لا يستخدم التطبيق الموقع في الخلفية.</li>
+    </ul>
+
+    <h2>2. معلومات تخرج من جهازك</h2>
+    <table>
+      <thead><tr><th>النوع</th><th>متى</th><th>البيانات</th><th>الغرض</th><th>الجهة المعالِجة</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>بلاغات المشاكل</td>
+          <td>فقط عند الضغط على إرسال في <em>الإعدادات ← الإبلاغ عن مشكلة</em></td>
+          <td>نوع المشكلة، وتعليقك، واسم السيارة، وطراز الجهاز، وإصدار أندرويد، وإصدار التطبيق، ومعرّف تثبيت Firebase، ومعرّف مستخدم مجهول عشوائي. <strong>لا يُرسل رقم الشاسيه VIN.</strong></td>
+          <td>لفحص المشكلة التي أبلغت عنها وإصلاحها</td>
+          <td>Google Firebase (Cloud Firestore وAuthentication)</td>
+        </tr>
+        <tr>
+          <td>تقارير الأعطال البرمجية</td>
+          <td>تلقائيًا عند توقف التطبيق أو حدوث خطأ</td>
+          <td>تفاصيل الخطأ، وطراز الجهاز، وإصدار أندرويد، وإصدار التطبيق، ومعرّف التثبيت، والشركة المصنّعة والطراز وسنة الصنع للسيارة، واسم المحوّل ونوع الاتصال. تُحذف أي قيم تشبه رقم الشاسيه قبل الإرسال.</td>
+          <td>لاكتشاف الأخطاء وإصلاحها والحفاظ على استقرار التطبيق</td>
+          <td>Google Firebase Crashlytics</td>
+        </tr>
+        <tr>
+          <td>إحصاءات الاستخدام</td>
+          <td>أثناء استخدام التطبيق</td>
+          <td>أحداث الاستخدام (مثل الشاشات التي تُفتح)، ومعرّف نسخة التطبيق، وطراز الجهاز، وإصدار أندرويد، والمنطقة التقريبية المستنتجة من عنوان IP</td>
+          <td>لمعرفة الميزات المستخدمة وتحسين التطبيق</td>
+          <td>Google Analytics for Firebase</td>
+        </tr>
+        <tr>
+          <td>فحص سلامة التطبيق</td>
+          <td>عند اتصال التطبيق بخوادم Firebase الخاصة بنا</td>
+          <td>مؤشرات سلامة الجهاز والتطبيق</td>
+          <td>لحماية الخوادم من إساءة الاستخدام</td>
+          <td>Firebase App Check وGoogle Play Integrity</td>
+        </tr>
+        <tr>
+          <td>الإعلانات</td>
+          <td>عند عرض الإعلانات</td>
+          <td>المعرّف الإعلاني، وعنوان IP والموقع التقريبي، ومعلومات الجهاز، والتفاعل مع الإعلانات</td>
+          <td>لعرض الإعلانات وقياسها ومنع الاحتيال الإعلاني</td>
+          <td>Google AdMob</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>تُرسل كل هذه البيانات عبر اتصالات مشفّرة (HTTPS).</p>
+
+    <h3>الإعلانات والموافقة</h3>
+    <p>التطبيق مجاني ويعرض إعلانات من Google AdMob. يمكن فتح بعض الميزات (مثل تصدير الرحلات وحساسات الرحلة) بمشاهدة إعلان بمكافأة اختياري.
+    إذا كنت في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة أو سويسرا، يطلب التطبيق موافقتك عبر نموذج الموافقة من Google قبل عرض إعلانات مخصّصة.
+    يمكنك تغيير اختيارك في أي وقت من <em>الإعدادات ← خيارات الخصوصية والإعلانات</em>.
+    وعلى أي جهاز أندرويد يمكنك إعادة تعيين المعرّف الإعلاني أو حذفه من <em>إعدادات أندرويد ← الخصوصية ← الإعلانات</em> (يختلف المسار حسب الجهاز).</p>
+
+    <h2>3. الأذونات التي يطلبها التطبيق</h2>
+    <ul>
+      <li><strong>البلوتوث / الأجهزة المجاورة:</strong> للعثور على محوّل OBD-II والاتصال به.</li>
+      <li><strong>الموقع:</strong> يتطلبه أندرويد للبحث عن أجهزة البلوتوث في بعض الإصدارات، ولحساسات GPS أثناء فتح التطبيق. لا يُستخدم في الخلفية أبدًا.</li>
+      <li><strong>الإشعارات:</strong> لعرض الإشعار المستمر أثناء تسجيل الرحلة.</li>
+      <li><strong>الإنترنت:</strong> لمحوّلات OBD عبر Wi-Fi، والإعلانات، وتقارير الأعطال، والإحصاءات، وبلاغات المشاكل.</li>
+    </ul>
+    <p>يمكنك رفض أي إذن. لن تعمل الميزة المرتبطة به، لكن باقي التطبيق سيعمل.</p>
+
+    <h2>4. مشاركة البيانات</h2>
+    <p>لا نبيع معلوماتك ولا نؤجّرها، ولا نشاركها مع أحد إلا مع مزوّدي خدمات Google المذكورين أعلاه الذين يعالجونها نيابةً عنا وفق شروطهم، أو عندما يلزم القانون بذلك.
+    لمعرفة كيف تستخدم Google البيانات: <a href="https://policies.google.com/technologies/partner-sites">كيف تستخدم Google المعلومات من التطبيقات التي تستخدم خدماتها</a>،
+    و<a href="https://firebase.google.com/support/privacy">خصوصية Firebase</a>،
+    و<a href="https://policies.google.com/privacy">سياسة خصوصية Google</a>.</p>
+
+    <h2>5. مدة الاحتفاظ بالبيانات</h2>
+    <ul>
+      <li>البيانات على جهازك: حتى تحذفها من التطبيق، أو تمسح بيانات التطبيق، أو تحذف التطبيق.</li>
+      <li>بلاغات المشاكل: حتى 12 شهرًا من استلامها، ثم تُحذف.</li>
+      <li>تقارير الأعطال البرمجية: تحتفظ بها Firebase Crashlytics لمدة تصل إلى 90 يومًا.</li>
+      <li>بيانات الإحصاءات والإعلانات: تُحفظ وفق إعدادات الاحتفاظ لدى Google.</li>
+    </ul>
+
+    <h2>6. خياراتك وحذف بياناتك</h2>
+    <ul>
+      <li><strong>البيانات على الجهاز:</strong> احذف السيارات والرحلات من داخل التطبيق، أو امسح كل شيء من <em>إعدادات أندرويد ← التطبيقات ← Car Scanner ← التخزين ← مسح البيانات</em>، أو احذف التطبيق.</li>
+      <li><strong>بلاغات المشاكل:</strong> راسلنا على <a href="mailto:ahmedessam291994@gmail.com?subject=Car%20Scanner%20data%20deletion" dir="ltr">ahmedessam291994@gmail.com</a> بعنوان "Car Scanner data deletion"، واذكر التاريخ التقريبي لإرسال البلاغ وطراز جهازك حتى نجده. نحذفه خلال 30 يومًا.</li>
+      <li><strong>الإعلانات:</strong> غيّر موافقتك من <em>الإعدادات ← خيارات الخصوصية والإعلانات</em> (إن وُجدت)، وتحكّم في المعرّف الإعلاني من إعدادات أندرويد.</li>
+    </ul>
+    <p>حسب مكان إقامتك، قد يحق لك الاطلاع على بياناتك الشخصية أو تصحيحها أو حذفها أو الاعتراض على معالجتها. تواصل معنا لممارسة هذه الحقوق.</p>
+
+    <h2>7. الأطفال</h2>
+    <p>Car Scanner أداة لتشخيص السيارات موجّهة للبالغين، وليست موجّهة للأطفال دون 13 عامًا، ولا نجمع معلوماتهم عن علم.</p>
+
+    <h2>8. التغييرات على هذه السياسة</h2>
+    <p>إذا تغيّرت هذه السياسة، سنحدّثها في هذه الصفحة ونغيّر تاريخ السريان أعلاه، وسنذكر التغييرات المهمة أيضًا في ملاحظات إصدار التطبيق.</p>
+
+    <h2>9. التواصل</h2>
+    <p>أحمد عصام (AEM Dev)، مصر<br>
+    البريد الإلكتروني: <a href="mailto:ahmedessam291994@gmail.com" dir="ltr">ahmedessam291994@gmail.com</a></p>
+  </section>
+</main>
+</body>
 </html>
